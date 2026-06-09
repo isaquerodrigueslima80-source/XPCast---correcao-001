@@ -1,42 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial, Helvetica, sans-serif;background:#071025;color:#eaf4ff}
 
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: blue;
-    color: black;
-}
+.centralizar-tela{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.caixa{background:#071a2b;padding:24px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.4);width:100%;max-width:360px}
 
-.caixa{
-    background-color: azure;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0, 10px 25px rgba(0,0,0,0,2);
-}
+.grupo-input{margin-bottom:14px}
+.grupo-input label{display:block;margin-bottom:6px}
+.grupo-input input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:inherit}
+.grupo-input input:focus{outline:none;box-shadow:0 0 10px rgba(0,179,255,0.12);border-color:#00b3ff}
 
-.grupo input{
-    margin-bottom: 15px;
-}
-
-.grupo input{
-    width: 100%;
-    padding: 10px;
-}
-
-.grupo input{
-    display: block;
-    margin-bottom: 5px;
-    border: 1px; color: black;
-}
-
-.grupo input :focus{
-    display: block;
-    border: 5px;
-}
-
-.grupo input{
-    border-color: black; 
-}
+.btn-login{width:100%;padding:12px;border-radius:999px;border:none;background:#00b3ff;color:#021425;font-weight:700;cursor:pointer}
+.btn-login:hover{transform:translateY(-2px)}
     

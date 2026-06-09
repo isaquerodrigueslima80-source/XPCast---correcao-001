@@ -1,11 +1,193 @@
-*{
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
 
-body{
+/* Corpo do site */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-attachment: fixed; /* Mantém o fundo elegante ao rolar */
+    color: #f0f0f0; /* Cor clara para leitura sobre fundo escuro */
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(17, 17, 17, 0.95); /* Leve transparência */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo-img {
+    width: auto;
+    height: 50px;
+    object-fit: contain; /* Evita que a logo amasse */
+    border-radius: 8px;
+}
+
+/* Links de Navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+
+/* Destaque para o link de Login */
+.login-button {
+    background-color: #00aaff;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0088cc;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+/* Pesquisa */
+.search-container form {
+    display: flex;
+    gap: 0; /* Unindo input e botão */
+}
+
+.search-container input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    background-color: #eee;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #0088cc;
+}
+
+/* Conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #00aaff; /* Título principal em azul */
+}
+
+/* Seções */
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    margin-bottom: 25px;
+    color: #fff;
+    border-left: 4px solid #00aaff;
+    padding-left: 15px;
+}
+
+/* Grid dos cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: #333; /* Texto dentro do card em cor escura */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Imagem do card (Corrigido para mostrar background-image) */
+.card-image {
+    width: 100%;
+    height: 160px;
+    background-color: #222;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Texto do card */
+.card h3 {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #777;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-container form {
+        width: 100%;
+    }
     
-    
+    .search-container input {
+        flex: 1;
+    }
 }
